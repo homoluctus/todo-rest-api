@@ -13,7 +13,7 @@ class IsOwnerOrAdminUser(permissions.IsAuthenticated):
             request.user.is_staff
         )
 
-class IsCurrentUserOrAdminUser(permissions.BasePermission):
+class IsSelfOrAdminUser(permissions.BasePermission):
     """
     The permission to allow current user or admin to edit his profile
     """
