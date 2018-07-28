@@ -25,6 +25,7 @@ class TodoViewSet(viewsets.ModelViewSet):
         serializer.save(slug=slug)
 
     def get_queryset(self):
+        # get object that object owner is authenticated (logged in) user
         current_user = self.request.user
         if current_user.is_staff:
             return Todo.objects.all()
