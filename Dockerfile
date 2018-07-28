@@ -1,4 +1,4 @@
-# This container is to develop flask app
+# This container is to develop python app
 FROM ubuntu:18.04
 RUN apt-get -y update \
     && apt-get -y upgrade \
